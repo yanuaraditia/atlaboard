@@ -1,0 +1,102 @@
+$primary: rgb(0, 82, 204);
+$primary-dark: rgb(23, 43, 77);
+$dark-trans: rgba(0, 0, 0,.01);
+$danger: rgb(222, 53, 11);
+$warning: rgb(255, 139, 0);
+$secondary: rgb(101, 84, 192);
+$success: rgb(54, 179, 126);
+$white: #fff;
+$sidebar-width: 65px;
+$radius: 8px;
+.text {
+    &-primary {
+        color: $primary!important;
+    }
+    &-secondary {
+        color: $secondary!important;
+    }
+    &-success {
+        color: $success!important;
+    }
+    &-danger {
+        color: $danger!important;
+    }
+
+}
+
+.card {
+    border: none;
+    border-radius: 6px;
+    &.summary {
+        position: relative;
+        h5 {
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        h3 {
+            margin: 0;
+        }
+        .icon {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+        }
+    }
+    &-footer, &-header {
+        background: $dark-trans;
+        border-color: rgba(0, 0, 0,.05);
+    }
+}
+
+.body-content {
+    background: #fff;
+    .sidebar {
+        position: fixed;
+        background: $primary;
+        height: 100vh;
+        width: $sidebar-width;
+        z-index: 999;
+        &-icons {
+            height: 100vh;
+            &-menu {
+                border: none;
+                background: transparent;
+                position: relative;
+                .list-group {
+                    &-item {
+                        background: transparent;
+                        border: none;
+                        color: $white;
+                    }
+                }
+                &-user {
+                    position: absolute;
+                    bottom: .7rem;
+                    left: calc(50% - 20px);
+                    img {
+                        border-radius: 100%;
+                        width: 40px;
+                        height: 40px;
+                        border: 2px solid $white;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper {
+        @media screen and (min-width:992px) {
+            margin-left: $sidebar-width;
+        }
+        .content-main {
+            background: #f1f1f1;
+        }
+    }
+}
+
+.credit {
+    .copy {
+        @media screen and (min-width:992px) {
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="body-content">
+        <div class="sidebar">
+            <div class="sidebar-icons">
+                <div class="sidebar-icons-menu">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item"><i data-feather="menu"></i></a>
+                        <a href="#" class="list-group-item"><i data-feather="layout"></i></a>
+                        <a href="#" class="list-group-item"><i data-feather="layers"></i></a>
+                    </div>
+                </div>
+                <div class="sidebar-icons-menu-user">
+                    <img src="images/user.jpg" alt="">
+                </div>    
+            </div>
+        </div>
+        <main class="wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i data-feather="more-vertical"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+            </nav>
+            <section class="content-main">
+                <div class="container-fluid">
+                    <section class="summary py-4">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-lg-3">
+                                    <div class="card summary">
+                                        <div class="card-body text-right">
+                                            <div class="icon text-primary">
+                                                <i data-feather="cloud" width="60px" height="60px"></i>
+                                            </div>
+                                            <h5>Capacity</h5>
+                                            <h3>50TB</h2>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <div class="card summary">
+                                        <div class="card-body text-right">
+                                            <div class="icon text-danger">
+                                                <i data-feather="codesandbox" width="60px" height="60px"></i>
+                                            </div>
+                                            <h5>Capacity</h5>
+                                            <h3>50TB</h2>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <div class="card summary">
+                                        <div class="card-body text-right">
+                                            <div class="icon text-warning">
+                                                <i data-feather="database" width="60px" height="60px"></i>
+                                            </div>
+                                            <h5>Capacity</h5>
+                                            <h3>50TB</h2>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <div class="card summary">
+                                        <div class="card-body text-right">
+                                            <div class="icon text-success">
+                                                <i data-feather="codepen" width="60px" height="60px"></i>
+                                            </div>
+                                            <h5>Capacity</h5>
+                                            <h3>50TB</h2>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="chart-section">
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>IHSG</h3>
+                                    <h6>Graphical data this week</h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="myChart" width="400" height="170"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="chart-section pt-4">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3>IHSG</h3>
+                                            <h6>Graphical data this week</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="pieChart" width="400" height="400"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="credit py-4">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <a href="//license">License</a>
+                                    <a href="//tries.co.id">Tries</a>
+                                </div>
+                                <div class="col-12 col-lg-6 copy">
+                                    &copy; 2020 made with ❤ by <a href="//yanuaraditia.com">Yanuar Aditia</a>
+                                </div>    
+                            </div>    
+                        </div>
+                    </footer>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
